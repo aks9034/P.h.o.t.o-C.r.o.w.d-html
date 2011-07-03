@@ -25,7 +25,7 @@ $(document).ready(function() {
 	
 	$('#comment-form').submit(function() {
 		var comment = $('#comment-form textarea').val();
-		var newItem = '<li class="comment"><div class="avatar-frame"><img alt="avatar" src="images/avatars/sonny-chavez.jpg"/></div><div class="content"><a href="#">Sonny Chavez</a> ' + comment + '<div class="date">less than a minute</div></div></li>';
+		var newItem = '<li class="comment"><div class="avatar-frame"><a href="#"><img alt="avatar" src="images/avatars/vaimiti.jpg"/></a></div><div class="content"><a href="#">Vaimiti</a> ' + comment + '<div class="date">less than a minute</div></div></li>';
 		$('#photo-comments').append(newItem);
 		
 		$('#comment-form textarea').css('height', commentTextAreaNonFocusHeight);
@@ -54,6 +54,20 @@ a:hover {
 
 .date {
 	color: #9b9b9b;
+}
+
+a#back-to-album {
+	background-color: #3366cc;
+	color: white;
+	
+	padding: 5px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+a#back-to-album:hover {
+	text-decoration: none;
+	text-shadow: 0 0 5px white;
 }
 
 div#poster-avatar.avatar-frame {
@@ -170,9 +184,14 @@ ul#photo-comments li:first-child {
 		</div>
 		<div id="body-wrapper" class="common-wrapper">
 			<div id="body" class="common-content">
+				<div id="page-controls">
+					<a href="album-details.html" id="back-to-album">← Back to Album</a>
+				</div>
 				<div id="left-column-poster-avatar">
 					<div id="poster-avatar" class="avatar-frame">
-						<img alt="avatar" src="images/avatars/bozzie.jpg"/>
+						<a href="#">
+							<img alt="avatar" src="images/avatars/bozzie.jpg"/>
+						</a>
 					</div>
 				</div>
 				<div id="right-column-main">
@@ -189,7 +208,9 @@ ul#photo-comments li:first-child {
 						<ul id="photo-comments">
 							<li class="comment">
 								<div class="avatar-frame">
-									<img alt="avatar" src="images/avatars/sonny-chavez.jpg"/>
+									<a href="#">
+										<img alt="avatar" src="images/avatars/sonny-chavez.jpg"/>
+									</a>
 								</div>
 								<div class="content">
 									<a href="#">Sonny Chavez</a> Weew... miss that festival
@@ -198,29 +219,26 @@ ul#photo-comments li:first-child {
 							</li>
 							<li class="comment">
 								<div class="avatar-frame">
-									<img alt="avatar" src="images/avatars/sonny-chavez.jpg"/>
+									<a href="#">
+										<img alt="avatar" src="images/avatars/leslie.jpg"/>
+									</a>
 								</div>
 								<div class="content">
-									<a href="#">Sonny Chavez</a> Weew... miss that festival
-									Weew... miss that festival 
-									Weew... miss that festival 
-									Weew... miss that festival 
-									Weew... miss that festival 
-									Weew... miss that festival 
-									Weew... miss that festival 
-									Weew... miss that festival 
-									Weew... miss that festival 
-									Weew... miss that festival 
-									Weew... miss that festival
+									<a href="#">Leslie</a> Hahaha... looks who is over there.
+									have some fun...! have some fun...! have some fun...! have some fun...!
+									have some fun...! have some fun...! have some fun...! have some fun...!
+									have some fun...! have some fun...! have some fun...! have some fun...!
 									<div class="date">2 hours ago</div>
 								</div>
 							</li>
 							<li class="comment">
 								<div class="avatar-frame">
-									<img alt="avatar" src="images/avatars/sonny-chavez.jpg"/>
+									<a href="#">
+										<img alt="avatar" src="images/avatars/meat-bingo.jpg"/>
+									</a>
 								</div>
 								<div class="content">
-									<a href="#">Sonny Chavez</a> Weew... miss that festival
+									<a href="#">Meat Bingo</a> Can't wait for next year!
 									<div class="date">2 hours ago</div> 
 								</div>
 							</li>
