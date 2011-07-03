@@ -23,7 +23,7 @@ $(document).ready(function() {
 });
 
 function simulateRecentActivityUpdate() {
-	var newElement = $('<li><div class="image-wrapper"><a href="#"><img alt="avatar" src="images/avatars/vaimiti.jpg"></a></div><div class="right-column"><div class="age">1 day ago</div><div class="content"><a href="#" class="username">Vaimiti</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta dapibus diam non mattis. Nunc aliquam lorem euismod dui viverra a pl<a href="#" class="open-tweet" style="opacity: 0;"><img alt="open twitter" src="images/twitter-small.png"></a></div></div></li>');
+	var newElement = $('<li><div class="image-wrapper"><a href="#"><img alt="avatar" src="images/avatars/vaimiti.jpg"></a></div><div class="right-column"><div class="date">1 day ago</div><div class="content"><a href="#" class="username">Vaimiti</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta dapibus diam non mattis. Nunc aliquam lorem euismod dui viverra a pl<a href="#" class="open-tweet" style="opacity: 0;"><img alt="open twitter" src="images/twitter-small.png"></a></div></div></li>');
 	newElement.mouseenter(showTwitterLink).mouseleave(hideTwitterLink);
 	newElement.hide().prependTo('#recent-activity ul#activities').slideDown('slow');
 	$('#recent-activity li:last').slideUp('slow', function() {
@@ -153,7 +153,7 @@ function simulateRecentActivityUpdate() {
 	max-width: 100%;
 }
 
-#recent-activity div.age {
+#recent-activity div.date {
 	width: 100%;
 	color: #9b9b9b;
 }
@@ -494,7 +494,7 @@ ul#photos li img:hover {
 									</a>
 								</div>
 								<div class="right-column">
-									<div class="age">1 day ago</div>
+									<div class="date">1 day ago</div>
 									<div class="content">
 										<a href="#" class="username">Vaimiti</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta dapibus diam non mattis. Nunc aliquam lorem euismod dui viverra a pl
 										<a href="#" class="open-tweet"><img alt="open twitter" src="images/twitter-small.png"></a>
@@ -508,7 +508,7 @@ ul#photos li img:hover {
 									</a>
 								</div>
 								<div class="right-column">
-									<div class="age">1 day ago</div>
+									<div class="date">1 day ago</div>
 									<div class="content">
 										<a href="#" class="username">Bozzie</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta dapibus diam non
 										<a href="#" class="open-tweet"><img alt="open twitter" src="images/twitter-small.png"></a>
@@ -522,7 +522,7 @@ ul#photos li img:hover {
 									</a>
 								</div>
 								<div class="right-column">
-									<div class="age">1 day ago</div>
+									<div class="date">1 day ago</div>
 									<div class="content">
 										<a href="#" class="username">meatbingo</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta dapibus diam non mattis. Nunc aliquam lorem euismod dui viverra a pl
 										<a href="#" class="open-tweet"><img alt="open twitter" src="images/twitter-small.png"></a>
@@ -536,7 +536,7 @@ ul#photos li img:hover {
 									</a>
 								</div>
 								<div class="right-column">
-									<div class="age">1 day ago</div>
+									<div class="date">1 day ago</div>
 									<div class="content">
 										<a href="#" class="username">meatbingo</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit
 										<a href="#" class="open-tweet"><img alt="open twitter" src="images/twitter-small.png"></a>
@@ -550,7 +550,7 @@ ul#photos li img:hover {
 									</a>
 								</div>
 								<div class="right-column">
-									<div class="age">1 day ago</div>
+									<div class="date">1 day ago</div>
 									<div class="content">
 										<a href="#" class="username">meatbingo</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta dapibus diam non mattis. Nunc aliquam lorem euismod dui viverra a pl
 										<a href="#" class="open-tweet"><img alt="open twitter" src="images/twitter-small.png"></a>
