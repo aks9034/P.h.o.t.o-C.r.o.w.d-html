@@ -1,8 +1,8 @@
-.wrapper {
+.common-wrapper {
 	padding: 0 50px;
 }
 
-.wrapper > .content {
+.common-wrapper > .common-content {
 	margin-left: auto;
 	margin-right: auto;
 	width: 1000px;
