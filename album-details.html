@@ -7,17 +7,14 @@
 <script type="text/javascript">
 
 function showTwitterLink() {
-	//$(this).find('a.open-tweet').css('visibility', 'visible');
 	$(this).find('a.open-tweet').stop().css('opacity', 1);
 }
 
 function hideTwitterLink() {
-	//$(this).find('a.open-tweet').css('visibility', 'hidden');
 	$(this).find('a.open-tweet').animate({opacity:0}, 'fast');
 }
 
 $(document).ready(function() {
-	//$('#recent-activity li a.open-tweet').css('visibility', 'hidden');
 	$('#recent-activity li a.open-tweet').css('opacity', 0);
 	$('#recent-activity li').mouseenter(showTwitterLink).mouseleave(hideTwitterLink);
 });
