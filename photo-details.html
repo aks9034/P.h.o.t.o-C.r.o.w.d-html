@@ -13,8 +13,11 @@ $(document).ready(function() {
 	$('#comment-form textarea').css('height', commentTextAreaNonFocusHeight);
 	
 	$('#comment-form textarea').focus(function() {
-		$(this).animate({height:commentTextAreaFocusHeight}, 'fast');
-		$('#comment-form-control').show();
+		var commentFormControl = $('#comment-form-control');
+		if (commentFormControl.css('display') == 'none') {
+			$(this).animate({height:commentTextAreaFocusHeight}, 'fast');
+			commentFormControl.show().css('opacity', 0).animate({opacity:1}, 'fast');
+		}
 	});
 	
 	$('#cancel-comment-button').click(function() {
