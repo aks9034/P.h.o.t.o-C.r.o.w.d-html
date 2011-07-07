@@ -13,7 +13,7 @@ $(document).ready(function() {
 	$('#comment-form textarea').css('height', commentTextAreaNonFocusHeight);
 	
 	$('#comment-form textarea').focus(function() {
-		$(this).css('height', commentTextAreaFocusHeight);
+		$(this).animate({height:commentTextAreaFocusHeight}, 'fast');
 		$('#comment-form-control').show();
 	});
 	
