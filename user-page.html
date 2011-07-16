@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Photo Crowd</title>
+<script type="text/javascript" src="javascripts/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="javascripts/main.js"></script>
 
 <link rel="stylesheet" media="screen"  href="stylesheets/common.css"/>
 <link rel="stylesheet" media="screen"  href="stylesheets/main.css"/>
@@ -147,7 +149,7 @@ ul#crowds {
                     </div>
                 </div>
                 <div class="right-column">
-                    <div class="container clickable user-panel" onclick="alert('open user panel')">
+                    <div id="user-panel" class="container clickable">
                         <div class="user-avatar-frame">
                             <img alt="avatar" src="images/avatars/bozzie.jpg">
                         </div>
@@ -155,6 +157,13 @@ ul#crowds {
                     </div>
                     <div class="container clickable create-crowd" onclick="location.href='album-create.html'">
                         <span class="create-sign">+</span><span class="crowd-text">Crowd</span>
+                    </div>
+                    <div id="user-menu">
+                        <ul>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="index.html">Sign out</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
