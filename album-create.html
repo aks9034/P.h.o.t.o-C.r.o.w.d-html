@@ -163,6 +163,41 @@ form div.field {
 	margin-bottom: 10px;
 }
 
+form div.field input, form div.field textarea {
+    margin: 0;
+    vertical-align: middle;
+}
+
+form .message {
+    font-size: 105%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+form .message .hint {
+    color: #66667d;
+}
+
+form .message span.ok {
+    color: #390;
+    background-image: url("images/accept-check.png");
+    background-repeat: no-repeat;
+    background-position: 0 1px;
+    padding-left: 20px;
+}
+
+form .message span.nok {
+    color: #c33;
+    background-image: url("images/error.png");
+    background-repeat: no-repeat;
+    background-position: 0 1px;
+    padding-left: 20px;
+}
+
+form .message span.hide {
+    display: none;
+}
+
 </style>
 </head>
 <body>
@@ -203,21 +238,41 @@ form div.field {
 				<form action="album-details.html">
 					<div class="field">
 						<input type="text" placeholder="Album name" />
+						<div class="message">
+                            <span class="hint hide">Enter the album name</span>
+                            <span class="ok">What a great name</span>
+						</div>
 					</div>
 					<div class="field">
 						<input type="text" placeholder="Start date" id="startDate" class="date"/>
+						<div class="message">
+                            <span class="hint">When does the event occurred?</span>
+                        </div>
 					</div>
 					<div class="field">
 						<input type="text" placeholder="End date" id="endDate" class="date"/>
+						<div class="message">
+                            <span class="hint">When the event should ended?</span>
+                        </div>
 					</div>
 					<div class="field">
 						<input type="text" placeholder="Hashtag"/>
+						<div class="message">
+                            <span class="hint hide">The hastag that describe the event?</span>
+                            <span class="nok">At least one hashtag hashtag is required!</span>
+                        </div>
 					</div>
 					<div class="field">
 						<input type="text" placeholder="Location"/>
+						<div class="message">
+						    <span class="hint">The location to narrow the aggregation</span>
+                        </div>
 					</div>
 					<div class="field">
 						<textarea rows="5" cols="30" placeholder="Description"></textarea>
+						<div class="message">
+                            <span class="hint">The hastag that describe the event?</span>
+                        </div>
 					</div>
 					<input type="submit" value="Create album"/>
 				</form>
