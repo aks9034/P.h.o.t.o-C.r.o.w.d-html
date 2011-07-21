@@ -86,14 +86,12 @@ ul#examples li {
     padding: 10px 35px;
 }
 
-input[type="submit"]#enter-crowd {
+a#enter-crowd {
     background-color: #1585c5;
     color: white;
     font-size: 200%;
     padding: 10px;
     text-decoration: none;
-    cursor: pointer;
-    border: 0;
     
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -108,7 +106,7 @@ input[type="submit"]#enter-crowd {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-input[type="submit"]#enter-crowd:hover {
+a#enter-crowd:hover {
     background-color: #1a93d9;
     
     -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
