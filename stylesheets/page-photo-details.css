@@ -11,7 +11,7 @@ a:hover {
     color: #9b9b9b;
 }
 
-a#back-to-album {
+a#go-to-album {
     background-color: #3366cc;
     color: white;
     
@@ -20,7 +20,7 @@ a#back-to-album {
     margin-bottom: 10px;
 }
 
-a#back-to-album:hover {
+a#go-to-album:hover {
     text-decoration: none;
     text-shadow: 0 0 5px white;
 }
