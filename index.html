@@ -17,7 +17,6 @@ $(document).ready(function() {
 	    var imageFileName = 'image' + (replacementIndex + 1) + ".jpg";
 	    
 	    var $img = $('#recent-photos img:eq(' + randomIndex + ')');
-	    $img.attr('src', 'images/photos/thumbnail/' + imageFileName);
 	    
 	    $img.fadeOut(200, function() {
 	        $img.attr('src', 'images/photos/thumbnail/' + imageFileName);
