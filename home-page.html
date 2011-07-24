@@ -7,21 +7,7 @@
 <script type="text/javascript" src="javascripts/jquery.masonry.min.js"></script>
 <script type="text/javascript" src="javascripts/main.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-	var $masonryContainer = $('#masonry-container');
-	$masonryContainer.imagesLoaded(function() {
-		$masonryContainer.masonry({
-			itemSelector : '.box', 
-			isAnimated: true, 
-			isFitWidth: true
-		});
-	});
-	
-	$('#masonry-container .box').click(function() {
-		document.location = $(this).attr('targetUrl');
-	});
-});
-
+var lastRandomIndex;
 var images = ['ABeautifulCeremony1.jpg', 
               'beachparty.jpg', 
               'burning_man_festival_12.jpg', 
@@ -40,24 +26,38 @@ var images = ['ABeautifulCeremony1.jpg',
               'wayans_birthday-party_cimg2174.jpg'];
 
 function appendImage(imageFileName) {
-	$element = $('<div class="box"><img alt="photo" src="images/photos/' + imageFileName + '"><div class="caption"><span>uudashr: Lorem ipsum dolor de amet bla bla bla</span></div></div>');
-	$('#masonry-container').prepend($element).masonry('remove', $('#masonry-container div.box:last')).masonry('reload');
+    $element = $('<div class="box"><img alt="photo" src="images/photos/' + imageFileName + '"><div class="caption"><span>uudashr: Lorem ipsum dolor de amet bla bla bla</span></div></div>');
+    $('#masonry-container').prepend($element).masonry('remove', $('#masonry-container div.box:last')).masonry('reload');
 }
 
-var lastRandomIndex;
-window.setInterval(function() {
-	var randomIndex;
-	for (var i = 0; i < 10; i++) {
-	    randomIndex = Math.floor(Math.random() * images.length);
-	    if (randomIndex != lastRandomIndex) {
-	    	break;
+$(document).ready(function() {
+	var $masonryContainer = $('#masonry-container');
+	$masonryContainer.imagesLoaded(function() {
+		$masonryContainer.masonry({
+			itemSelector : '.box', 
+			isAnimated: true, 
+			isFitWidth: true
+		});
+	});
+	
+	$('#masonry-container .box').click(function() {
+		document.location = $(this).attr('targetUrl');
+	});
+	
+	window.setInterval(function() {
+	    var randomIndex;
+	    for (var i = 0; i < 10; i++) {
+	        randomIndex = Math.floor(Math.random() * images.length);
+	        if (randomIndex != lastRandomIndex) {
+	            break;
+	        }
 	    }
-    }
-	
-	appendImage(images[randomIndex]);
-	lastRandomIndex = randomIndex;
-	
-}, 10000);
+	    
+	    appendImage(images[randomIndex]);
+	    lastRandomIndex = randomIndex;
+	    
+	}, 10000);
+});
 
 </script>
 
