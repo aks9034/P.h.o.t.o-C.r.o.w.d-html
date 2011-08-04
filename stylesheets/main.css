@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: Helvetica, Tahoma, Arial, sans-serif;
     font-size: 12px;
+		background: url('../images/grayBg.jpg') fixed repeat;
 }
 
 #top-bar {
