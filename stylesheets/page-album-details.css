@@ -135,12 +135,8 @@
 div#photos {
     margin: 0;
     padding: 5px 0 0 0;
-}
-
-div#photos  {
     display: inline-block;
 }
-
 
 div.photo-item {
     vertical-align: top;
