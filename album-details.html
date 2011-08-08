@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Photo Crowd</title>
-<script type="text/javascript" src="javascripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="javascripts/main.js"></script>
 <script type="text/javascript">
 
@@ -18,6 +18,19 @@ function hideTwitterLink() {
 $(document).ready(function() {
     $('#recent-activity li a.open-tweet').css('opacity', 0);
     $('#recent-activity li').mouseenter(showTwitterLink).mouseleave(hideTwitterLink);
+
+	var lastFetchedMessage = 0;
+
+	$('#moreButton').click(function() {
+		alert('test');
+	  	$.ajax({
+		        url: 'mock/photos.json',
+		        contentType: 'application/json; charset=utf-8',
+		        dataType: 'json',
+		        data: '{"lastId":'+lastFetchedMessage+'"}',
+		        success: newMessagesReceived
+		});
+	});
 });
 
 function simulateRecentActivityUpdate() {
@@ -29,6 +42,14 @@ function simulateRecentActivityUpdate() {
     });
     
 }
+
+function newMessagesReceived(json) {
+	$.each(json.photos,function(i,photo){
+	   $("#photos").append('<div class="photo-item new-item"> <div class="photo"> <a href="photo-details.html"> <img alt="photo"src="'+photo.url+'"></a></div><a href="#" class="poster">'+photo.poster+'</a><p>'+photo.text+'</p></div>')
+	});
+	$('#photos').find(".new-item").slideDown("slow");
+}
+
 </script>
 
 <link rel="stylesheet" media="screen"  href="stylesheets/common.css"/>
@@ -219,7 +240,7 @@ function simulateRecentActivityUpdate() {
 
                         </div>
 						<div class="more">
-							<a href="#" class="button blue" data-page="2">More</a>
+							<a href="#"  id="moreButton" class="button blue" data-page="2">More</a>
 						</div>
 
 					</div>
